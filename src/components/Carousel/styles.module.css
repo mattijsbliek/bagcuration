@@ -1,0 +1,24 @@
+.controls {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.controls > li {
+  flex: 1;
+  margin-right: 3px;
+}
+
+.controls > li:last-child {
+  margin-right: 0;
+}
+
+.controls button {
+  appearance: none;
+  padding: 0;
+  border: 0;
+}
+
+.controls button:focus {
+  outline: 0;
+}

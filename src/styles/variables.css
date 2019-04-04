@@ -1,0 +1,4 @@
+:global {
+  --breakpoint-medium-up: 700px;
+  --breakpoint-large-up: 940px;
+}

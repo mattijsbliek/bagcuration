@@ -1,0 +1,19 @@
+import React from 'react';
+import { Link } from 'gatsby';
+
+import Layout from 'components/Layout';
+import SEO from 'components/seo';
+import Wrapper from 'components/Wrapper';
+
+const About = () => (
+  <Layout>
+    <Wrapper>
+      <SEO title="Page two" />
+      <h1>About</h1>
+      <p>Welcome to page 2</p>
+      <Link to="/">Go back to the homepage</Link>
+    </Wrapper>
+  </Layout>
+);
+
+export default About;

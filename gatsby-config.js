@@ -44,8 +44,8 @@ module.exports = {
       options: {
         tables: [
           {
-            baseId: `appIMUBp7U4igkpQd`,
-            tableName: `tblv0NCJQXqW2STVl`,
+            baseId: process.env.AIRTABLE_BASE,
+            tableName: process.env.AIRTABLE_TABLE,
             tableView: `Grid view`, // optional
             queryName: `backpacks`, // optional
             // mapping: { `CASE_SENSITIVE_COLUMN_NAME`: `VALUE_FORMAT` }, // optional, e.g. "text/markdown", "fileNode"

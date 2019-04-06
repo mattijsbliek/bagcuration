@@ -8,7 +8,12 @@ const Carousel = ({ images, slug }) => (
     <div>
       {images.map(({ filename }, index) => {
         if (index === 0) {
-          return <CdnImage key={filename} src={`bags/${slug}/${filename}`} />;
+          return (
+            <CdnImage
+              key={filename}
+              src={`bags/${slug}/${filename}?nf_resize=fit&w=430`}
+            />
+          );
         }
 
         return <CdnImage key={filename} dataSrc={`bags/${slug}/${filename}`} />;
@@ -19,7 +24,7 @@ const Carousel = ({ images, slug }) => (
         <li key={filename}>
           <button>
             <CdnImage
-              src={`bags/${slug}/${filename}?nf_resize=fit&w=80&h=100`}
+              src={`bags/${slug}/${filename}?nf_resize=smartcrop&w=80&h=100`}
               alt=""
             />
           </button>

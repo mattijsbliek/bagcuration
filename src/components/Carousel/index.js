@@ -18,7 +18,10 @@ const Carousel = ({ images, slug }) => (
       {images.map(({ filename }) => (
         <li key={filename}>
           <button>
-            <CdnImage src={`bags/${slug}/${filename}`} alt="" />
+            <CdnImage
+              src={`bags/${slug}/${filename}?nf_resize=fit&w=80&h=100`}
+              alt=""
+            />
           </button>
         </li>
       ))}

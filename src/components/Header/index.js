@@ -1,16 +1,15 @@
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 import React from 'react';
 
 import Wrapper from '../Wrapper';
 
-import logo from '../../images/logo.svg';
 import styles from './styles.module.css';
 
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
     <Wrapper>
       <Link to="/">
-        <img src={logo} alt="Bag Curation" />
+        <img src={withPrefix('/images/logo.svg')} alt="Bag Curation" />
       </Link>
       <nav className={styles.nav}>
         <Link to="/about">About</Link>

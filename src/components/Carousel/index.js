@@ -8,17 +8,17 @@ const Carousel = ({ images, slug }) => (
     <div>
       {images.map(({ filename }, index) => {
         if (index === 0) {
-          return <CdnImage key={filename} src={`${slug}/${filename}`} />;
+          return <CdnImage key={filename} src={`bags/${slug}/${filename}`} />;
         }
 
-        return <CdnImage key={filename} dataSrc={`${slug}/${filename}`} />;
+        return <CdnImage key={filename} dataSrc={`bags/${slug}/${filename}`} />;
       })}
     </div>
     <ul className={styles.controls}>
       {images.map(({ filename }) => (
         <li key={filename}>
           <button>
-            <CdnImage src={`${slug}/${filename}`} alt="" />
+            <CdnImage src={`bags/${slug}/${filename}`} alt="" />
           </button>
         </li>
       ))}

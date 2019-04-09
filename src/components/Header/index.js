@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
   <header className={styles.header}>
     <Wrapper>
       <Link to="/">
-        <img src={withPrefix('/images/logo.svg')} alt="Bag Curation" />
+        <img src={withPrefix('images/logo.svg')} alt="Bag Curation" />
       </Link>
       <nav className={styles.nav}>
         <Link to="/about">About</Link>

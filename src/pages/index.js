@@ -22,7 +22,10 @@ const IndexPage = ({
               {...bag}
               to={`/bags/${bag.slug}`}
               subheading={bag.brand}
-              image={`images/bags/${bag.slug}/cover.png`}
+              images={[
+                `images/bags/${bag.slug}/cover.webp`,
+                `images/bags/${bag.slug}/cover.png`,
+              ]}
             />
           ))}
         </CardGrid>

@@ -32,6 +32,10 @@ export const query = graphql`
         price
         url
         slug
+        width
+        height
+        depth
+        weight
         images {
           filename
         }

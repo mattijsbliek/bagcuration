@@ -6,7 +6,21 @@ const SuggestABag = () => (
   <Layout>
     <Wrapper>
       <h1>Suggest a bag</h1>
-      <p>There will be a form here</p>
+      <form name="contact" method="POST" data-netlify="true">
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input type="text" name="name" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input type="email" name="email" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="url">Link to bag suggestion</label>
+          <input type="text" name="url" />
+        </div>
+        <button type="submit">Send</button>
+      </form>
     </Wrapper>
   </Layout>
 );

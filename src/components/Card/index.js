@@ -19,18 +19,22 @@ const getImageType = url => {
   }
 };
 
-const Card = ({ name, subheading, to, images }) => (
+const Card = ({ name, subheading, to, images, lazy }) => (
   <Link className={styles.card} to={to}>
     <figure className={styles.figure}>
       <picture>
         {images.map((image, index) => {
+          const src = withPrefix(`${image}?nf_resize=smartcrop&w=390&h=490`);
+          const src2x = withPrefix(`${image}?nf_resize=smartcrop&w=780&h=980`);
+          const srcset = `${src}, ${src2x} 2x`;
+
           // If this is not the last img, return <source>
           if (index !== images.length - 1) {
             return (
               <source
                 key={image}
                 type={getImageType(image)}
-                srcset={withPrefix(`${image}?nf_resize=smartcrop&w=390&h=490`)}
+                srcset={srcset}
                 className={styles.image}
                 alt=""
               />
@@ -40,7 +44,9 @@ const Card = ({ name, subheading, to, images }) => (
           // If this is the last img, return <img>
           return (
             <img
-              src={withPrefix(`${image}?nf_resize=smartcrop&w=390&h=490`)}
+              src={src}
+              srcset={`${src}, ${src2x} 2x`}
+              loading={lazy ? 'lazy' : null}
               className={styles.image}
               alt=""
             />

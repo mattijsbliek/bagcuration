@@ -2,10 +2,10 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // Components
-import Card from '../components/Card';
-import CardGrid from '../components/CardGrid';
-import Layout from '../components/Layout';
-import Wrapper from '../components/Wrapper';
+import Card from 'components/Card';
+import CardGrid from 'components/CardGrid';
+import Layout from 'components/Layout';
+import Wrapper from 'components/Wrapper';
 
 const IndexPage = ({
   data: {
@@ -13,12 +13,13 @@ const IndexPage = ({
   },
 }) => {
   return (
-    <Layout title="Bag Curation">
+    <Layout title="Find your next bag the easy way">
       <Wrapper>
         <CardGrid>
-          {data.map(({ node: { data: bag } }) => (
+          {data.map(({ node: { data: bag } }, index) => (
             <Card
               key={bag.name}
+              lazy={index > 8}
               {...bag}
               to={`/bags/${bag.slug}`}
               subheading={bag.brand}

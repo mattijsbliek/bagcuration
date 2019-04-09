@@ -37,6 +37,10 @@ a {
   text-decoration: none;
 }
 
+a:focus {
+  outline: none;
+}
+
 dd {
   margin: 0;
 }

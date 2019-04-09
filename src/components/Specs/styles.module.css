@@ -1,0 +1,34 @@
+.specs {
+  margin-top: 80px;
+}
+
+.specs h2 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.specs dl {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  font-size: 13px;
+}
+
+.specs dt,
+.specs dd {
+  border-top: 1px solid #ccc;
+  padding: 13px 0;
+}
+
+.specs dt:last-of-type,
+.specs dd:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs dd {
+  text-align: right;
+}

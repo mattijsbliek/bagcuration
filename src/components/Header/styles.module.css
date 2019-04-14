@@ -16,3 +16,29 @@
 .nav a {
   font-weight: bold;
 }
+
+/*
+ * Compact header
+ */
+.compact {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.compact > * {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding-top: 0;
+}
+
+.compact .nav {
+  justify-content: end;
+  grid-gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.compact img {
+  width: 140px;
+}

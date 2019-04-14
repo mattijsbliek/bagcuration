@@ -14,6 +14,7 @@
 }
 
 .controls button {
+  position: relative;
   appearance: none;
   padding: 0;
   border: 0;
@@ -21,4 +22,13 @@
 
 .controls button:focus {
   outline: 0;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid #000;
 }

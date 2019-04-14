@@ -16,24 +16,21 @@ const BagDetail = ({
   ...rest
 }) => (
   <article className={styles.bag}>
-    <Carousel images={images} slug={slug} />
     <div>
       <p className={styles.brand}>{brand}</p>
       <h1 className={styles.title}>{name}</h1>
-      <div className={styles.priceFavorite}>
-        <p>
-          {new Intl.NumberFormat('nl-NL', {
-            style: 'currency',
-            currency,
-          }).format(price)}
-        </p>
-        <button>Favorite</button>
-      </div>
+      <p className={styles.price}>
+        {new Intl.NumberFormat('nl-NL', {
+          style: 'currency',
+          currency,
+        }).format(price)}
+      </p>
       <p>
         <LinkProduct url={url} />
       </p>
       <Specs {...rest} />
     </div>
+    <Carousel images={images} slug={slug} />
   </article>
 );
 

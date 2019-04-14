@@ -5,7 +5,7 @@ import Footer from 'components/Footer';
 import Header from 'components/Header';
 import Meta from 'components/Meta';
 
-const Layout = ({ children, title }) => (
+const Layout = ({ children, title, isHome }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -19,7 +19,7 @@ const Layout = ({ children, title }) => (
     render={data => (
       <>
         <Meta title={title} />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header compact={!isHome} siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <Footer />
       </>

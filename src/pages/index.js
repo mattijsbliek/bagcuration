@@ -13,7 +13,7 @@ const IndexPage = ({
   },
 }) => {
   return (
-    <Layout title="Find your next bag the easy way">
+    <Layout isHome title="Find your next bag the easy way">
       <Wrapper>
         <CardGrid>
           {data.map(({ node: { data: bag } }, index) => (

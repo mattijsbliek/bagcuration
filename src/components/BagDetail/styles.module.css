@@ -1,8 +1,15 @@
 .bag {
-  display: inline-grid;
-  grid-template-columns: 400px 1fr;
+  display: grid;
   grid-gap: 40px;
   margin: 0 auto;
+
+  @media (min-width: 800px) {
+    grid-template-columns: 400px 1fr;
+  }
+
+  @media (min-width: 1100px) {
+    grid-template-columns: 600px 1fr;
+  }
 }
 
 .brand {
@@ -11,14 +18,11 @@
 }
 
 .title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 44px;
 }
 
-.price-favorite {
-  display: grid;
-  grid-template-columns: auto auto 1fr;
-  grid-gap: 10px;
-  align-items: start;
+.price {
   margin-bottom: 30px;
+  font-size: 20px;
 }

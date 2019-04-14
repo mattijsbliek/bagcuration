@@ -5,8 +5,8 @@ import Wrapper from '../Wrapper';
 
 import styles from './styles.module.css';
 
-const Header = ({ siteTitle }) => (
-  <header className={styles.header}>
+const Header = ({ siteTitle, compact }) => (
+  <header className={`${styles.header} ${compact ? styles.compact : ''}`}>
     <Wrapper>
       <Link to="/">
         <img src={withPrefix('images/logo.svg')} alt="Bag Curation" />

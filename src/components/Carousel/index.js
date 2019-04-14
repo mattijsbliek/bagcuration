@@ -11,7 +11,7 @@ const Carousel = ({ images, slug }) => {
   return (
     <div>
       <div>
-        <CdnImage src={`bags/${slug}/${activeImage}?nf_resize=fit&w=430`} />
+        <CdnImage src={`bags/${slug}/${activeImage}?nf_resize=fit&w=600`} />
       </div>
       <ul className={styles.controls}>
         {images.map(({ filename }) => (

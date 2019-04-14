@@ -11,7 +11,7 @@ const Bag = ({
   },
 }) => {
   return (
-    <Layout>
+    <Layout title={`${data.brand} ${data.name}`}>
       <Wrapper>
         <BagDetail {...data} />
       </Wrapper>

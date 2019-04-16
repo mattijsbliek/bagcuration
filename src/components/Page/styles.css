@@ -1,0 +1,47 @@
+.page {
+  margin-top: 100px;
+  max-width: 490px;
+  font-size: 17px;
+
+  @media (min-width: 1300px) {
+    max-width: 590px;
+  }
+}
+
+.page h1 {
+  @media (min-width: 1000px) {
+    font-size: 42px;
+  }
+}
+
+.page h2 {
+  margin-top: 50px;
+
+  @media (min-width: 1000px) {
+    font-size: 32px;
+  }
+}
+
+.page .twitter-tweet {
+  margin-bottom: 30px !important;
+
+  @media (min-width: 1100px) {
+    float: right;
+    width: 400px !important;
+    margin-right: -460px;
+  }
+
+  @media (min-width: 1300px) {
+    width: 500px !important;
+    margin-right: -570px;
+  }
+}
+
+.page a {
+  text-decoration: underline;
+}
+
+.page a:hover,
+.page a:focus {
+  text-decoration: none;
+}

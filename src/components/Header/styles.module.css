@@ -1,44 +1,28 @@
 .header {
   margin-bottom: 50px;
-  padding-top: 60px;
-  background: #f2f2f2;
+  padding: 15px 0;
+  background: #f2f4f6;
   text-align: center;
 }
 
-.nav {
-  margin-top: 50px;
-  padding: 0 10px 10px;
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
-}
-
-.nav a {
-  font-weight: bold;
-}
-
-/*
- * Compact header
- */
-.compact {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.compact > * {
+.header > * {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   padding-top: 0;
 }
 
-.compact .nav {
-  justify-content: end;
-  grid-gap: 30px;
-  margin: 0;
-  padding: 0;
+.header img {
+  width: 140px;
 }
 
-.compact img {
-  width: 140px;
+.nav {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: end;
+  grid-gap: 30px;
+}
+
+.nav a {
+  font-weight: bold;
 }

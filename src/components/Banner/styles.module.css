@@ -1,0 +1,22 @@
+.banner {
+  margin-bottom: 50px;
+  padding-top: 60px;
+  background: #f2f4f6;
+  text-align: center;
+}
+
+.banner p {
+  margin-top: 20px;
+}
+
+.nav {
+  margin-top: 50px;
+  padding: 0 10px 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+.nav a {
+  font-weight: bold;
+}

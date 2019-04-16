@@ -1,27 +1,19 @@
 import React from 'react';
+import FormGroup from 'components/FormGroup';
 import Layout from 'components/Layout';
-import Wrapper from 'components/Wrapper';
+import Page from 'components/Page';
 
 const SuggestABag = () => (
   <Layout>
-    <Wrapper>
+    <Page>
       <h1>Suggest a bag</h1>
       <form name="contact" method="POST" data-netlify="true">
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input type="text" name="name" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="url">Link to bag suggestion</label>
-          <input type="text" name="url" />
-        </div>
+        <FormGroup label="Name" name="name" />
+        <FormGroup label="Email" name="email" type="email" />
+        <FormGroup label="Link to bag suggestion" name="url" />
         <button type="submit">Send</button>
       </form>
-    </Wrapper>
+    </Page>
   </Layout>
 );
 

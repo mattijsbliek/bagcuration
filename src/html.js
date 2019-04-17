@@ -36,7 +36,7 @@ export default function HTML(props) {
                 m=f.getElementsByTagName('script')[0];
                 o.async=1; o.src=t; o.id='fathom-script';
                 m.parentNode.insertBefore(o,m)
-              })(document, window, 'https://aly.mattijsbliek.com/tracker.js', 'fathom');
+              })(document, window, 'https://analytics.mattijsbliek.com/tracker.js', 'fathom');
               fathom('set', 'siteId', 'LKBBV');
               fathom('trackPageview');
           `,

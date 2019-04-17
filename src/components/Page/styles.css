@@ -1,14 +1,15 @@
 .page {
   margin-top: 100px;
   max-width: 490px;
-  font-size: 17px;
 
   @media (min-width: 1300px) {
-    max-width: 590px;
+    max-width: 540px;
   }
 }
 
 .page h1 {
+  font-size: 32px;
+
   @media (min-width: 1000px) {
     font-size: 42px;
   }
@@ -32,9 +33,15 @@
   }
 
   @media (min-width: 1300px) {
-    width: 500px !important;
-    margin-right: -570px;
+    max-width: 580px !important;
+    width: 580px !important;
+    margin-right: -640px;
   }
+}
+
+.page p {
+  color: #666;
+  font-size: 17px;
 }
 
 .page a {

@@ -34,7 +34,7 @@ const Card = ({ name, subheading, to, images, lazy }) => (
               <source
                 key={image}
                 type={getImageType(image)}
-                srcset={srcset}
+                srcSet={srcset}
                 className={styles.image}
                 alt=""
               />
@@ -44,8 +44,9 @@ const Card = ({ name, subheading, to, images, lazy }) => (
           // If this is the last img, return <img>
           return (
             <img
+              key={image}
               src={src}
-              srcset={`${src}, ${src2x} 2x`}
+              srcSet={`${src}, ${src2x} 2x`}
               loading={lazy ? 'lazy' : null}
               className={styles.image}
               alt=""

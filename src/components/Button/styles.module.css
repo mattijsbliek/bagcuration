@@ -1,0 +1,31 @@
+.button {
+  appearance: none;
+  display: inline-block;
+  min-width: 100px;
+  padding: 12px 12px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.button.dark {
+  background: #000;
+  color: #fff;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  outline: 0;
+  background: #000;
+  color: #fff;
+}
+
+.button.dark:hover,
+.button.dark:focus {
+  background: #fff;
+  color: #000;
+}
+
+.button svg {
+  margin-left: 10px;
+}

@@ -21,8 +21,14 @@
   grid-template-columns: auto auto;
   justify-content: end;
   grid-gap: 30px;
+  font-family: var(--font-headings);
 }
 
 .nav a {
   font-weight: bold;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #444;
 }

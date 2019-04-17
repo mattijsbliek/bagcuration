@@ -3,6 +3,7 @@
 }
 
 .specs h2 {
+  font-family: var(--font-body);
   font-size: inherit;
   font-weight: normal;
 }

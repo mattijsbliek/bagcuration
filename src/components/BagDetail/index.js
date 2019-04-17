@@ -13,6 +13,7 @@ const BagDetail = ({
   url,
   slug,
   images,
+  description,
   ...rest
 }) => (
   <article className={styles.bag}>
@@ -25,6 +26,13 @@ const BagDetail = ({
           currency,
         }).format(price)}
       </p>
+      {description && (
+        <div className={styles.description}>
+          {description.split('\n').map(paragraph => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      )}
       <p>
         <LinkProduct url={url} />
       </p>

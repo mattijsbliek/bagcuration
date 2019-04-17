@@ -15,8 +15,14 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
+  font-family: var(--font-headings);
 }
 
 .nav a {
   font-weight: bold;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #444;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, withPrefix } from 'gatsby';
 
 function Meta({ description, lang, meta, keywords, title }) {
   return (
@@ -19,10 +19,6 @@ function Meta({ description, lang, meta, keywords, title }) {
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
-                name: 'robots',
-                content: 'noindex, nofollow',
-              },
-              {
                 name: `description`,
                 content: metaDescription,
               },
@@ -33,6 +29,10 @@ function Meta({ description, lang, meta, keywords, title }) {
               {
                 property: `og:description`,
                 content: metaDescription,
+              },
+              {
+                property: `og:image`,
+                content: withPrefix('/images/og-image.jpg'),
               },
               {
                 property: `og:type`,

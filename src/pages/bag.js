@@ -36,6 +36,7 @@ export const query = graphql`
         height
         depth
         weight
+        description
         images {
           filename
         }

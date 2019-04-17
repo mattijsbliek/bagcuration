@@ -18,7 +18,7 @@ const IndexPage = ({
         <CardGrid>
           {data.map(({ node: { data: bag } }, index) => (
             <Card
-              key={bag.name}
+              key={`${bag.brand}-${bag.name}`}
               lazy={index > 8}
               {...bag}
               to={`/bags/${bag.slug}`}

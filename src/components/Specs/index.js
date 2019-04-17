@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './styles.module.css';
 
 const parseDimension = unit => {
-  return `${unit} cm (${Math.round(unit * 25.5) / 100} inch)`;
+  return `${Math.round(unit * 10) / 10} cm (${Math.round(unit * 2.55) /
+    10} inch)`;
 };
 
-const Specs = ({ width, height, depth }) => (
+const Specs = ({ width, height, depth, weight }) => (
   <div className={styles.specs}>
     <h2>Specifications</h2>
     <dl>
@@ -15,6 +16,12 @@ const Specs = ({ width, height, depth }) => (
       <dd>{parseDimension(height)}</dd>
       <dt>Depth</dt>
       <dd>{parseDimension(depth)}</dd>
+      {weight && (
+        <>
+          <dt>Weight</dt>
+          <dd>{weight} kg</dd>
+        </>
+      )}
     </dl>
   </div>
 );

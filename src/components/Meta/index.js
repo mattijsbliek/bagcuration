@@ -32,7 +32,7 @@ function Meta({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: withPrefix('/images/og-image.jpg'),
+                content: 'https://bagcuration.com/images/og-image.jpg',
               },
               {
                 property: `og:type`,

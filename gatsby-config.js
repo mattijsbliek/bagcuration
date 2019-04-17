@@ -6,8 +6,7 @@ module.exports = {
   siteMetadata: {
     author: '@mattijsbliek',
     title: `Bag Curation`,
-    description:
-      'A selection of the best bags around. Find your next bag the easy way.',
+    description: 'A hand-picked selection of the best bags around.',
   },
   plugins: [
     {

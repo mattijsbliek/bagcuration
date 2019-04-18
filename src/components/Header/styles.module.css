@@ -10,18 +10,31 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   padding-top: 0;
+
+  @media (max-width: 499px) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
 }
 
 .header img {
-  width: 140px;
+  width: 120px;
+
+  @media (min-width: 500px) {
+    width: 140px;
+  }
 }
 
 .nav {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: end;
-  grid-gap: 30px;
+  grid-gap: 20px;
   font-family: var(--font-headings);
+
+  @media (min-width: 500px) {
+    grid-gap: 30px;
+  }
 }
 
 .nav a {

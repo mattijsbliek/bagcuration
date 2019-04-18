@@ -19,7 +19,7 @@ const getImageType = url => {
   }
 };
 
-const Card = ({ name, subheading, to, images, lazy }) => (
+const Card = ({ name, subheading, to, price, currency, images, lazy }) => (
   <Link className={styles.card} to={to}>
     <figure className={styles.figure}>
       <picture>
@@ -57,6 +57,12 @@ const Card = ({ name, subheading, to, images, lazy }) => (
     </figure>
     <h2 className={styles.title}>{name}</h2>
     <p className={styles.subheading}>{subheading}</p>
+    <p className={styles.price}>
+      {new Intl.NumberFormat('nl-NL', {
+        style: 'currency',
+        currency,
+      }).format(price)}
+    </p>
   </Link>
 );
 
